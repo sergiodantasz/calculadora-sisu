@@ -13,10 +13,8 @@ function calculateAverage() {
   for (let i = 0; i <= 4; i++) {
     let gradeValue = parseFloat(grades.elements[i].value)
     let weightValue = parseFloat(weights.elements[i].value)
-    console.log(gradeValue, weightValue)
     sumGrades += gradeValue * weightValue
     sumWeights += weightValue
-    console.log(sumWeights)
   }
   average = (sumGrades / sumWeights).toFixed(1)
   averageElement.textContent = average
