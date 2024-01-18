@@ -10,7 +10,76 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Calculadora SiSU</h1>
+    <main class="content">
+      <header class="content-header">
+        <h1>Calculadora do SiSU</h1>
+        <div class="line"></div>
+        <h3>Insira abaixo as suas notas no ENEM e os pesos do curso desejado e calcule sua média.</h3>
+      </header>
+      <form method="post" class="calculator-container">
+        <fieldset class="grades">
+          <legend class="grades-title">
+            <h3>Notas</h3>
+          </legend>
+          <label for="grade-mathematics" class="container">
+            <div class="title">Matemática</div>
+            <input required class="input" placeholder="000.0" type="number" name="grade-mathematics" id="grade-mathematics" step="0.1" min="0.0">
+          </label>
+          <label for="grade-languages" class="container">
+            <div class="title">Linguagens</div>
+            <input required class="input" placeholder="000.0" type="number" name="grade-languages" id="grade-languages" step="0.1" min="0.0">
+          </label>
+          <label for="grade-nature" class="container">
+            <div class="title">Natureza</div>
+            <input required class="input" placeholder="000.0" type="number" name="grade-nature" id="grade-nature" step="0.1" min="0.0">
+          </label>
+          <label for="grade-human" class="container">
+            <div class="title">Humanas</div>
+            <input required class="input" placeholder="000.0" type="number" name="grade-human" id="grade-human" step="0.1" min="0.0">
+          </label>
+          <label for="grade-essay" class="container">
+            <div class="title">Redação</div>
+            <input required class="input" placeholder="000.0" type="number" name="grade-essay" id="grade-essay" step="0.1" min="0.0">
+          </label>
+        </fieldset>
+        <fieldset class="weights">
+          <legend class="weights-title">
+            <h3>Pesos</h3>
+          </legend>
+          <label for="weight-mathematics" class="container">
+            <div class="title">Matemática</div>
+            <input required class="input" placeholder="0.0" type="number" name="weight-mathematics" id="weight-mathematics" step="0.1" min="0.0">
+          </label>
+          <label for="weight-languages" class="container">
+            <div class="title">Linguagens</div>
+            <input required class="input" placeholder="0.0" type="number" name="weight-languages" id="weight-languages" step="0.1" min="0.0">
+          </label>
+          <label for="weight-nature" class="container">
+            <div class="title">Natureza</div>
+            <input required class="input" placeholder="0.0" type="number" name="weight-nature" id="weight-nature" step="0.1" min="0.0">
+          </label>
+          <label for="weight-human" class="container">
+            <div class="title">Humanas</div>
+            <input required class="input" placeholder="0.0" type="number" name="weight-human" id="weight-human" step="0.1" min="0.0">
+          </label>
+          <label for="weight-essay" class="container">
+            <div class="title">Redação</div>
+            <input required class="input" placeholder="0.0" type="number" name="weight-essay" id="weight-essay" step="0.1" min="0.0">
+          </label>
+        </fieldset>
+        <div class="actions">
+          <button class="button" type="submit">Calcular</button>
+          <div class="result">
+            <span>Média</span>
+            <div class="line"></div>
+            <span class="average">000.0</span>
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <p>Desenvolvida por <a target="_blank" href="https://github.com/sergiodantasz">Sérgio Dantas</a>. Código-fonte disponível no <a target="_blank" href="https://github.com/sergiodantasz/calculadora-sisu">GitHub</a>.</p>
+    </footer>
   </body>
   <script src="script.js"></script>
 </html>
