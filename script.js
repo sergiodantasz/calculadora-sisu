@@ -2,6 +2,7 @@ const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   calculateAverage()
+  shakeResult()
 })
 
 function calculateAverage() {
@@ -18,4 +19,13 @@ function calculateAverage() {
   }
   average = (sumGrades / sumWeights).toFixed(1)
   averageElement.textContent = average
+}
+
+function shakeResult() {
+  const resultElement = document.querySelector('.result')
+  let animation = 'animate__headShake'
+  resultElement.classList.add(animation)
+  setTimeout(() => {
+    resultElement.classList.remove(animation)
+  }, 800)
 }
